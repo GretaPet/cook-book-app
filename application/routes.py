@@ -41,16 +41,16 @@ def complete(name):
         db.session.commit()
     else:
         error = f'No dish with that name could be found in the database, please try again.'
-    return render_template('tasks.html', error=error, tasks=tasks)
+    return render_template('dishes.html', error=error, dishes=dishes)
 
 @app.route('/incomplete/<name>', methods=['GET'])
 def incomplete(name):
     dish = Dishes.query.filter_by(name=name).first()
-    tasks = Dishes.query.all()
+    dishes = Dishes.query.all()
     error = ""
     if dish:
         dish.completed = False
         db.session.commit()
     else:
         error = f'No dish with that name could be found in the database, please try again.'
-    return render_template('tasks.html', error=error, tasks=tasks)
+    return render_template('tasks.html', error=error, dishes=dishes)
