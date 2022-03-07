@@ -2,18 +2,27 @@ from application import app, db
 from application.models import Dishes
 from flask import render_template
 
+@app.route('/')
+def cook_book():
+    return "CookBook WebApp"
+
 @app.route('/create/<name>', methods=['GET'])
 def create(name):
-    dish = Dishes(name=name, description="A new dish")
+    dish = Dishes(name=name)
     db.session.add(dish)
     db.session.commit()
-    return render_template('create.html', name=name)
+    return f'Added new dish: {name}'
 
 @app.route('/read', methods=['GET'])
 def read():
     dishes = Dishes.query.all()
-    return render_template('read.html', dishes=dishes)
-
+    return_string = ""
+    for dish in dishes:
+        return_string += str(dish.name) + '<br>'
+    if return_string == "":
+        return f'There are no dishes in the database'
+    else:
+        return f'{return_string}'
 
 @app.route('/update/<newname>', methods=['GET'])
 def update(newname):
@@ -21,36 +30,12 @@ def update(newname):
     old_name = dish.name
     dish.name = newname
     db.session.commit()
-    return render_template('update.html', oldname=old_name, newname=newname)
+    return f'The dish with name: {old_name}, has been renamed to {newname}'
 
 @app.route('/delete/<name>', methods=['GET'])
 def delete(name):
     dish = Dishes.query.filter_by(name=name).first()
-    old_name = dish.name
+    name = dish.name
     db.session.delete(dish)
     db.session.commit()
-    return render_template('delete.html', oldname=old_name)
-
-@app.route('/complete/<name>', methods=['GET'])
-def complete(name):
-    dish = Dishes.query.filter_by(name=name).first()
-    tasks = Dishes.query.all()
-    error = ""
-    if dish:
-        dish.completed = True
-        db.session.commit()
-    else:
-        error = f'No dish with that name could be found in the database, please try again.'
-    return render_template('dishes.html', error=error, dishes=dishes)
-
-@app.route('/incomplete/<name>', methods=['GET'])
-def incomplete(name):
-    dish = Dishes.query.filter_by(name=name).first()
-    dishes = Dishes.query.all()
-    error = ""
-    if dish:
-        dish.completed = False
-        db.session.commit()
-    else:
-        error = f'No dish with that name could be found in the database, please try again.'
-    return render_template('tasks.html', error=error, dishes=dishes)
+    return f'The dish with name: {name}, has been deleted'
