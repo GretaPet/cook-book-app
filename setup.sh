@@ -6,5 +6,5 @@ python -m venv venv
 source venv/Scripts/activate
 pip install -r requirements.txt
 
-python create.py
-python app.py
+python3 create.py
+python3 app.py
