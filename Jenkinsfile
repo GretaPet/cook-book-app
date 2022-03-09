@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                sh 'sudo systemctl start application'
+                sh 'python app.py'
             }
         }
     }
