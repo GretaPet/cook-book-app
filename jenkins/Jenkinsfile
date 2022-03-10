@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    environment{
+    DOCKER_HUB_CREDS = credentials("DOCKER_HUB_CREDS")
+    }
+    stages {
+        stage('Setup') {
+            steps {
+              sh  "bash jenkins/setup.sh"
+            }
+        }
+        stage('Test') {
+            steps {
+                sh "bash jenkins/test.sh"
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "docker-compose build"
+            }
+        }
+        stage('Push') {
+            steps {
+                sh "docker-compose push"
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh "bash jenkins/deploy.sh"
+            }
+        }
+    }
+}
