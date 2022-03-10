@@ -3,6 +3,7 @@ services:
   application:
     build: ./
     image: ${DOCKER_HUB_CREDS_USR}/cook-book-app:latest
+    container_name: cook-book-app_application
     ports:
     - target: 5000
       published: 5000
