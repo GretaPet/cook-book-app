@@ -2,7 +2,7 @@ from os import name
 from flask import url_for
 from flask_testing import TestCase
 from application import app
-# from application.models import Dishes
+from application.models import Dishes
 
 class TestBase(TestCase):
 
@@ -13,23 +13,23 @@ class TestBase(TestCase):
             WTF_CSRF_ENABLED=False)
         return app
 
-#     def setUp(self):
+    def setUp(self):
 
-#         db.session.commit()
-#         db.drop_all()
-#         db.create_all()
+        db.session.commit()
+        db.drop_all()
+        db.create_all()
 
-#         dish1=Dishes(name='pizza')
-#         dish2=Dishes(name='pasta')
+        dish1=Dishes(name='pizza')
+        dish2=Dishes(name='pasta')
 
-#         db.session.add(dish1)
-#         db.session.add(dish2)
-#         db.session.commit()
+        db.session.add(dish1)
+        db.session.add(dish2)
+        db.session.commit()
 
-#     def tearDown(self):
+    def tearDown(self):
         
-#         db.session.remove()
-#         db.drop_all()
+        db.session.remove()
+        db.drop_all()
 
 class TestDishes(TestBase):
 
