@@ -1,8 +1,1 @@
-version: "3.8"
-services:
-  cookbook-compose:
-    build: ./
-    ports:
-    - target: 5000
-      published: 5000
-      protocol: tcp
+
