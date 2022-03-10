@@ -3,14 +3,13 @@
 echo "This is test stage"
 
 python3 -m venv venv
-source venv/Scripts/activate
+source venv/bin/activate
 
-pip3 install pytest pytest-cov flask_testing requests_mock
+pip3 install pytest flask_testing
 pip3 install -r requirements.txt
 
-mkdir test_reports
 
-python3 -m pytest \
+python3 -m pytest application\
   --cov \
   --cov=application \
   --cov-report term-missing \
