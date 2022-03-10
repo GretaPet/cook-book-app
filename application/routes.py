@@ -6,6 +6,10 @@ from flask import render_template
 def cook_book():
     return "CookBook WebApp"
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
 @app.route('/create/<name>', methods=['GET'])
 def create(name):
     dish = Dishes(name=name)

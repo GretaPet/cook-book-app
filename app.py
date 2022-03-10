@@ -1,4 +1,4 @@
-from application import app
+from application import app 
 
 application_host = "cook-book-app_application:latest"
 
