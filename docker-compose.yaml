@@ -2,7 +2,7 @@ version: "3.8"
 services:
   application:
     build: ./
-    image: ${DOCKER_HUB_CREDS_USR}/cookbook:latest
+    image: ${DOCKER_HUB_CREDS_USR}/cook-book-app:latest
     ports:
     - target: 5000
       published: 5000
