@@ -61,7 +61,7 @@ Jenkins Console output for :
 The application is deployed to Docker Swarm hosted on Azure cloud Virtual machine that works both as manager and worker nodes. For this application i am using two diferent virtual machines: development VM for Jenkins and deployment VM for Docker Swarm. They are both a part of the same virtual network, so Jenkins can automaticaly update and deploy the new version of the application to web.
 ## Future Improvements
 The application is working and is stable but there is a number of issues that coould be fixed or improved. 
-First, I would write more unit tests to increese the coverage of the application
-Second, I would create a new entity for the ingreedients, in order to be able to create many-to-many relationship between 2 databases. I would do that by creating a page for a Recipie that stores information of ingreedients in dish. 
-Finaly, I would like to try to improve the UI by using Bootstrap framework.
+* First, I would write more unit tests to increese the coverage of the application
+* Second, I would create a new entity for the ingreedients, in order to be able to create many-to-many relationship between 2 databases. I would do that by creating a page for a Recipie that stores information of ingreedients in dish. 
+* Finaly, I would like to try to improve the UI by using Bootstrap framework.
 
