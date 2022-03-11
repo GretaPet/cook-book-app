@@ -13,24 +13,6 @@ class TestBase(TestCase):
             WTF_CSRF_ENABLED=False)
         return app
 
-    def setUp(self):
-
-        db.session.commit()
-        db.drop_all()
-        db.create_all()
-
-        dish1=Dishes(name='pizza')
-        dish2=Dishes(name='pasta')
-
-        db.session.add(dish1)
-        db.session.add(dish2)
-        db.session.commit()
-
-    def tearDown(self):
-        
-        db.session.remove()
-        db.drop_all()
-
 class TestDishes(TestBase):
 
     def test_cookbook(self):
