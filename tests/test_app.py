@@ -41,3 +41,20 @@ class TestDishes(TestBase):
         response = self.client.get(url_for('read'))
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'pizza', response.data)
+
+    def test_home(self):
+        response = self.client.get(url_for('home'))
+        self.assertEqual(response.status_code, 200)
+
+    # def test_create(self):
+    #     response = self.client.get(url_for('create'))
+    #     self.assertEqual(response.status_code, 200)
+
+    # def test_update(self):
+    #     response = self.client.get(url_for('update'))
+    #     self.assertEqual(response.status_code, 200)
+
+    # def test_delete(self):
+    #     response = self.client.get(url_for('delete'))
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertIn(b'pizza', response.data)
