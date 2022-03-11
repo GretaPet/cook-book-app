@@ -1,4 +1,5 @@
- {% extends "layout.html" %}
- {% block body %}
- <p>This is the home page for the CookBook</p>
- {% endblock body %}
+{% extends "layout.html" %}
+{% block body %}
+<p>This is the home page for the CookBook</p>
+<a href="{{ url_for('read') }}">Menu</a>
+{% endblock body %}
