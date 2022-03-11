@@ -64,5 +64,5 @@ The application is working and is stable but there is a number of issues that co
 * First, I would write more unit tests to increese the coverage of the application
 * Second, I would create a new entity for the ingreedients, in order to be able to create many-to-many relationship between 2 databases. I would do that by creating a page for a Recipie that stores information of ingreedients in dish. 
 * Finaly, I would like to try to improve the UI by using Bootstrap framework.
-![pytest] [pytest_cov]
+![pytest] [pytest]
 [pytest]: https://i.imgur.com/oXDX1y3.png
