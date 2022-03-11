@@ -64,13 +64,26 @@ It is important to start testing early and often. To test this application I am 
 The project also requires  creating CI/CD Pipeline that automates the integration, testing and deployment of the new code. Automation server used to build the pipeline is Jenkins and it must run unit tests, build the Docker images, push Docker images to registry and deploy to a Swarm. The pipeline should be trigered everytime a new push or change is made on the github repository which is achieved by using GitHub Webhook.
 
 ![CiCd][CiCd]
-
-Jenkins Build Stages
+ 
+![jenkins][jenkins]
 
 Jenkins Console output for :
 * Test
+
+![jenkinstest][jenkinstest]
+
 * Build
+
+![build][build]
+
 * Push
+
+![push][push]
+
+* Deploy
+
+![deploy][deploy]
+
 ## Deployment
 The application is deployed to Docker Swarm hosted on Azure cloud Virtual machine that works both as manager and worker nodes. For this application i am using two diferent virtual machines: development VM for Jenkins and deployment VM for Docker Swarm. They are both a part of the same virtual network, so Jenkins can automaticaly update and deploy the new version of the application to web.
 * Docker Swarm
@@ -88,3 +101,8 @@ The application is working and is stable but there is a number of issues that co
 [MtoM]: https://i.imgur.com/2s68QtU.jpg
 [CiCd]: https://i.imgur.com/7sbZcaD.jpg
 [pytest]: https://i.imgur.com/RULIu1S.jpg
+[jenkins]: https://i.imgur.com/tRNwHYh.jpg
+[jenkinstest]: https://i.imgur.com/zyVqZlN.jpg
+[build]: https://i.imgur.com/ihU4jT0.jpg
+[push]: https://i.imgur.com/3DAHooD.jpg
+[deploy]: https://i.imgur.com/V0j3Kn5.jpg
