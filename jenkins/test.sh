@@ -13,8 +13,8 @@ mkdir test_files
 python3 -m pytest application \
   --cov=application \
   --cov-report term-missing \
-  --cov-report xml:test_filles/coverage.xml \
-  --junitxml=test_filles/junit_report.xml
+  --cov-report xml:test_files/coverage.xml \
+  --junitxml=test_files/junit_report.xml
 
 deactivate
 rm -rf venv
