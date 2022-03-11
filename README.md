@@ -45,6 +45,9 @@ This is a possible many-to-many relationship model that could be implemented on 
 ## Testing
 It is important to start testing early and often. To test this application I am using pytest to write unit tests, that are run by jenkins each time the change has been made on the repository. Pytest generates coverage reports that can be viewed in Jenkins console output for the Test stage of the pipeline build.
 * Pytest
+
+![pytest][pytest]
+
 ## CI/CD
 The project also requires  creating CI/CD Pipeline that automates the integration, testing and deployment of the new code. Automation server used to build the pipeline is Jenkins and it must run unit tests, build the Docker images, push Docker images to registry and deploy to a Swarm. The pipeline should be trigered everytime a new push or change is made on the github repository which is achieved by using GitHub Webhook.
 
@@ -65,6 +68,6 @@ The application is working and is stable but there is a number of issues that co
 * Second, I would create a new entity for the ingreedients, in order to be able to create many-to-many relationship between 2 databases. I would do that by creating a page for a Recipie that stores information of ingreedients in dish. 
 * Finaly, I would like to try to improve the UI by using Bootstrap framework.
 
-![account][account]
 
-[account]: https://i.imgur.com/RULIu1S.jpg
+
+[pytest]: https://i.imgur.com/RULIu1S.jpg
