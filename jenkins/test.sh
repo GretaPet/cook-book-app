@@ -8,7 +8,7 @@ source venv/bin/activate
 pip3 install pytest pytest-cov flask_testing wheel
 pip3 install -r requirements.txt
 
-python3 -m pytest application \
+python3 -m pytest \
   --cov=application \
   --cov-report term-missing \
   --cov-report xml:tests/coverage.xml \
