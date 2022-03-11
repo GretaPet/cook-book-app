@@ -99,7 +99,7 @@ The application is working and is stable but there is a number of issues that co
 [risks]: https://i.imgur.com/IvHWDoP.png
 [1toM]: https://i.imgur.com/XNnNVwW.jpg
 [MtoM]: https://i.imgur.com/2s68QtU.jpg
-[CiCd]: https://i.imgur.com/7sbZcaD.jpg
+[CiCd]: https://i.imgur.com/Ux9JegF.jpg
 [pytest]: https://i.imgur.com/RULIu1S.jpg
 [jenkins]: https://i.imgur.com/tRNwHYh.jpg
 [jenkinstest]: https://i.imgur.com/zyVqZlN.jpg
