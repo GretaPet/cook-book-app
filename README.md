@@ -32,3 +32,4 @@
 # Deployment
 * Docker Swarm
 # Future Improvements
+* Bootstrap
