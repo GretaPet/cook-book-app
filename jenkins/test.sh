@@ -8,8 +8,6 @@ source venv/bin/activate
 pip3 install pytest pytest-cov flask_testing
 pip3 install -r requirements.txt
 
-mkdir test_files
-
 python3 -m pytest application \
   --cov=application \
   --cov-report term-missing \
