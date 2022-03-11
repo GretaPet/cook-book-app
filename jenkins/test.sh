@@ -11,8 +11,8 @@ pip3 install -r requirements.txt
 python3 -m pytest application \
   --cov=application \
   --cov-report term-missing \
-  --cov-report xml:test_files/coverage.xml \
-  --junitxml=test_files/junit_report.xml
+  --cov-report xml:tests/coverage.xml \
+  --junitxml=tests/junit_report.xml
 
 deactivate
 rm -rf venv
