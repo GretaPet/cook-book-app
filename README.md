@@ -1,7 +1,12 @@
 # CookBook App
 ## Resources:
-* Git:
 * Video:
+## Brief
+This is the final project for DfE Cloud Specialism. Objective of this project is to create a recipe book that keeps track of recipes. It must achieve the following:
+* To create a web application that integrates with a database and demonstrates CRUD functionality.
+* To utilise containers to host and deploy your application.
+* To create a continuous integration (CI)/continuous deployment (CD) pipeline that will automatically test, build and deploy your application.
+
 ## Version Control
 * Github and Jira
 ## Technologies
