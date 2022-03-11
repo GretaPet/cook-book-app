@@ -57,8 +57,8 @@ Jenkins Console output for :
 * Build
 * Push
 ## Deployment
-* Docker Swarm
 The application is deployed to Docker Swarm hosted on Azure cloud Virtual machine that works both as manager and worker nodes. For this application i am using two diferent virtual machines: development VM for Jenkins and deployment VM for Docker Swarm. They are both a part of the same virtual network, so Jenkins can automaticaly update and deploy the new version of the application to web.
+* Docker Swarm
 ## Future Improvements
 The application is working and is stable but there is a number of issues that coould be fixed or improved. 
 * First, I would write more unit tests to increese the coverage of the application
