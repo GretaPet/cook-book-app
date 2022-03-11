@@ -66,4 +66,5 @@ The application is working and is stable but there is a number of issues that co
 * Finaly, I would like to try to improve the UI by using Bootstrap framework.
 
 ![account][account]
+
 [account]: https://i.imgur.com/RULIu1S.jpg
