@@ -1,6 +1,6 @@
 # CookBook App
 ## Resources:
-Video:
+Video: https://we.tl/t-FhFhdDsENQ
 
 ## Brief
 This is the final project for DfE Cloud Specialism. Objective of this project is to create a recipe book that keeps track of recipes. It must achieve the following:
