@@ -11,8 +11,16 @@ This is the final project for DfE Cloud Specialism. Objective of this project is
 ## Version Control
 * Github and Jira
 Github and Jira The project tracking software used for this project is Jira using Agile Scrum methods. I have planed out the project using user stories that are prioritized using MoSCoW methods. Each user story is divided into story points that have estimation effort measured by point system that uses fibinachi sequence. 
+
+![scrum][scrum]
+
 Jira board is integrated with the github accunt and it allows me to use smart commits to update the progress of the tasks while making pushes of the changes to GitHub repository.
+
+![jira][jira]
+
 A simple Risk Assesment has been written for the project
+
+![risks][risks]
 
 ## Technologies
 * Python
@@ -39,9 +47,13 @@ To achieve this, I have decided to create app that must allow the user to do the
 ⦁	Delete a dish from the database
 ## Database
 The application database has one-to-many relationship but it is posible to create this app with many-to-many relationship. To hit the MVP the application must show full CRUD functionality for at least one entity . I have created 2 spare diagrams for each type of the relationship. The first one is one-to-many and its the type that it is used for this version of the app. /Read page will store all of the dishes creating one to many relationship.
+
+![1toM][1toM]
+
 This is a possible many-to-many relationship model that could be implemented on the application. I would take an approach of creating a new page for recipes that tracks all the suitable ingreedients for each dish. 
-* EDR
-* SQLAlchemy
+
+![MtoM]
+
 ## Testing
 It is important to start testing early and often. To test this application I am using pytest to write unit tests, that are run by jenkins each time the change has been made on the repository. Pytest generates coverage reports that can be viewed in Jenkins console output for the Test stage of the pipeline build.
 * Pytest
@@ -51,7 +63,7 @@ It is important to start testing early and often. To test this application I am 
 ## CI/CD
 The project also requires  creating CI/CD Pipeline that automates the integration, testing and deployment of the new code. Automation server used to build the pipeline is Jenkins and it must run unit tests, build the Docker images, push Docker images to registry and deploy to a Swarm. The pipeline should be trigered everytime a new push or change is made on the github repository which is achieved by using GitHub Webhook.
 
-CI/CD pipeline diagram
+![CiCd][CiCd]
 
 Jenkins Build Stages
 
@@ -69,5 +81,10 @@ The application is working and is stable but there is a number of issues that co
 * Finaly, I would like to try to improve the UI by using Bootstrap framework.
 
 
-
+[scrum]: https://i.imgur.com/lYeBP4T.jpg
+[jira]: https://i.imgur.com/4A0a26W.jpg
+[risks]: https://i.imgur.com/IvHWDoP.png
+[1toM]: https://i.imgur.com/XNnNVwW.jpg
+[MtoM]: https://i.imgur.com/2s68QtU.jpg
+[CiCd]: https://i.imgur.com/7sbZcaD.jpg
 [pytest]: https://i.imgur.com/RULIu1S.jpg
