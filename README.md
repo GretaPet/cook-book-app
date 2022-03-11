@@ -1,5 +1,4 @@
 # CookBook App
-
 ## Resources:
 Video:
 
