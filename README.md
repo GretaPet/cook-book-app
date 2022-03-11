@@ -13,22 +13,22 @@
 * Docker Swarm
 * MySQL
 * Jenkins Pipelines
-#Application
+# Application
 * A recipe book app that keeps track of recipes and ingredients.
 * Flask 
 * CRUD
 * HTML
-#Database
+# Database
 * EDR
 * SQLAlchemy
-#Testing
+# Testing
 * Pytest
-#CI/CD
+# CI/CD
 * Jenkins Pipeline
 * Run Unit Tests
 * Build Docker images
 * Push Docker images to DockerHub
 * Deploy to a Docker Swarm
-#Deployment
+# Deployment
 * Docker Swarm
-#Future Improvements
+# Future Improvements
